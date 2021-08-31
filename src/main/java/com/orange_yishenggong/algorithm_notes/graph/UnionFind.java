@@ -53,6 +53,7 @@ public class UnionFind {
             ans.add(i);
         return ans;
     }
+    //find out useless edges which cause a circle in the graph
     public static List<Integer> findRedundantConnection(int[][] edges) {
         UF uf = new UF(edges.length);
         for (int[] edge : edges) {
