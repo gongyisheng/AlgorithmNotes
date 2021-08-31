@@ -10,16 +10,16 @@ class GNode {
         outNodes = new ArrayList<>();
     }
 }
-class TopologicalSort {
-    public boolean hasCircle(int[][] graph){
+public class TopologicalSort {
+    public static boolean hasCircle(int[][] graph){
         //build the graph
         Map<Integer,GNode> nodeMap = new HashMap<>();
-        for(int i=0;i<graph.length;i++){
-            nodeMap.putIfAbsent(graph[i][0],new GNode());
-            nodeMap.putIfAbsent(graph[i][1],new GNode());
-            GNode from = nodeMap.get(graph[i][0]);
-            GNode to = nodeMap.get(graph[i][1]);
-            from.outNodes.add(graph[i][1]);
+        for (int[] ints : graph) {
+            nodeMap.putIfAbsent(ints[0], new GNode());
+            nodeMap.putIfAbsent(ints[1], new GNode());
+            GNode from = nodeMap.get(ints[0]);
+            GNode to = nodeMap.get(ints[1]);
+            from.outNodes.add(ints[1]);
             to.inDegree++;
         }
 
