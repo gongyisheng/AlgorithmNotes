@@ -3,6 +3,15 @@ package com.orange_yishenggong.algorithm_notes.graph;
 import java.util.ArrayList;
 import java.util.List;
 
+//Time complexity after path compression
+//Construct: O(N)
+//Find: O(⍺(N))
+//Union: O(⍺(N))
+// ⍺ refers to the Inverse Ackermann function
+// In practice, we assume it's a constant.
+// In other words, O(⍺(N)) is regarded as O(1) on average.
+
+//Space complexity: O(N)
 class UF {
     public int[] sz;
     public int[] id;
