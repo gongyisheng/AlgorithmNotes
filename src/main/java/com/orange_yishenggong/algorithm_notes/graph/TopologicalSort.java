@@ -46,6 +46,6 @@ public class TopologicalSort {
             }
         }
         //if has circle, count will be less than graph.length
-        return removedEdge == graph.length;
+        return removedEdge != graph.length;
     }
 }
