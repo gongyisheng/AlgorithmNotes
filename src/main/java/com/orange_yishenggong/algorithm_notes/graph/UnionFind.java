@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 //Time complexity after path compression
-//Construct: O(N)
-//Find: O(⍺(N))
-//Union: O(⍺(N))
+//Construct: O(V)
+//Find: O(⍺(V))
+//Union: O(⍺(V))
 // ⍺ refers to the Inverse Ackermann function
 // In practice, we assume it's a constant.
 // In other words, O(⍺(N)) is regarded as O(1) on average.
+//E:edges,V:vertices
 
 //Space complexity: O(N)
 class UF {
