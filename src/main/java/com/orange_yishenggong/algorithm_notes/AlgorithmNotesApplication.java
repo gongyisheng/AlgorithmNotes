@@ -5,6 +5,7 @@ import com.orange_yishenggong.algorithm_notes.graph.Prim;
 import com.orange_yishenggong.algorithm_notes.graph.TopologicalSort;
 import com.orange_yishenggong.algorithm_notes.tests.ts;
 import com.orange_yishenggong.algorithm_notes.graph.UnionFind;
+import com.orange_yishenggong.algorithm_notes.graph.DFS;
 import com.orange_yishenggong.algorithm_notes.tests.uf;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,5 +22,6 @@ public class AlgorithmNotesApplication {
         System.out.println(uf.test(graph2));
         System.out.println(Kruskal.minCostWithPoints(points1));
         System.out.println(Prim.minCostWithPoints(points1));
+        System.out.println(DFS.findPath(7,graph1,1,6));
     }
 }
