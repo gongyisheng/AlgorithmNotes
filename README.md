@@ -7,7 +7,7 @@
 ######  　1. [Union and Find 并查集](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/UnionFind.java)
 ######  　2. Search 搜索算法
 ######  　　2.1 [Depth First Search 深度优先搜索](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/DFS.java)
-######  　　2.2 [Breadth First Search 广度优先搜索]()
+######  　　2.2 [Breadth First Search 广度优先搜索(to be continue)]()
 ######  　3. Shortest Path Problem 最短路径问题
 ######  　　3.1 [Dijkstra's Algorithm 迪杰斯特拉算法](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/Dijkstra.java)
 ######  　4. Minimum spanning tree 最小生成树
