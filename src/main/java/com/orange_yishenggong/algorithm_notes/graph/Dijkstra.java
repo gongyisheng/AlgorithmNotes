@@ -7,24 +7,6 @@ import java.util.*;
 //V: Vertices, E: Edges
 
 public class Dijkstra {
-    private static class Vertice{
-        int val;
-        int dist;
-        public Vertice(int v,int d){
-            val = v;
-            dist = d;
-        }
-    }
-    private static class Edge{
-        int from;
-        int to;
-        int weight;
-        public Edge(int f,int t,int w){
-            from = f;
-            to = t;
-            weight = w;
-        }
-    }
     //build graph
     private static int n;
     private static int[][] graph;
