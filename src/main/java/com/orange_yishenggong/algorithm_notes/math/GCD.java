@@ -1,5 +1,8 @@
 package com.orange_yishenggong.algorithm_notes.math;
 
+//Time Complexity: O(logN)
+//Space Complexity: O(1)
+
 public class GCD {
     public static int getIntegerGCD(int n1,int n2){
         if(n1==0) return n2;
