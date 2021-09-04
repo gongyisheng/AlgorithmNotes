@@ -11,7 +11,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AlgorithmNotesApplication {
     private static int[][] graph1 = new int[][]{{1,0},{1,2},{2,3},{3,4},{1,4},{5,2},{2,6}};//has circle;
     private static int[][] graph2 = new int[][]{{1,2},{2,3},{3,4},{1,4},{1,5},{1,3}};
-    private static int[] weight2 = new int[]{2,3,1,1,3,3};
+    private static int[] weight2 = new int[]{2,3,1,1,3,8};
+    private static int[][] graph3 = new int[][]{{1,10},{1,2},{2,10},{1,3},{3,5},{5,10}};
+    private static int[] weight3 = new int[]{10,3,1,1,1,1};
     private static int[][] points1 = new int[][]{{3,12},{-2,5},{-4,1}};
     private static String[][] tickets = new String[][]{{"JFK","KUL"},{"JFK","NRT"},{"NRT","JFK"}};
     public static void main(String[] args) {
@@ -27,10 +29,13 @@ public class AlgorithmNotesApplication {
 //        System.out.println(DFS.isReachable(1,6));
 //        System.out.println(DFS.findPath(1,6));
 //        System.out.println(Hierholzer.findPath(tickets,"JFK"));
-        System.out.println(GCD.getIntegerGCD(625,175));
-        System.out.println(GCD.getStringGCD("abcabcabc","abcabc"));
+//        System.out.println(GCD.getIntegerGCD(625,175));
+//        System.out.println(GCD.getStringGCD("abcabcabc","abcabc"));
         Dijkstra testDijkstra = new Dijkstra();
-        testDijkstra.buildGraph(5,graph2,weight2);
-        System.out.println(testDijkstra.getMinDist(1,3));
+        testDijkstra.buildGraph(11,graph3,weight3);
+        System.out.println(testDijkstra.getMinDist(1,10));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,1));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,2));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,3));
     }
 }

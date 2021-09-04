@@ -27,39 +27,59 @@ public class Dijkstra {
     }
     //build graph
     private static int n;
-    private static Map<Integer,List<Edge>> graph = new HashMap<>();
+    private static int[][] graph;
     public static void buildGraph(int vertice,int[][] edges,int[] weight){
         n = vertice;
-        for(int i=0;i< edges.length;i++){
-            graph.putIfAbsent(edges[i][0],new ArrayList<>());
-            graph.get(edges[i][0]).add(new Edge(edges[i][0],edges[i][1],weight[i]));
-        }
+        graph = new int[n][n];
+        for(int i=0;i< edges.length;i++)
+            graph[edges[i][0]][edges[i][1]] = weight[i];
     }
 
     public static int getMinDist(int start,int end){
         //We create a hashSet and a pq here. hashSet to record visited nodes and pq to record edges to unvisited nodes with min dist.
         Set<Integer> visited = new HashSet<>();
-        PriorityQueue<Vertice> pq = new PriorityQueue<Vertice>((a, b)->a.dist-b.dist);
-        pq.offer(new Vertice(start,0));
+        PriorityQueue<int[]> pq = new PriorityQueue<int[]>((a, b)->a[0]-b[0]);
+        //The PriorityQueue will contain (distance,node)
+        pq.offer(new int[]{0,start});
 
         while(!pq.isEmpty()){
             //Every time we poll out the edge with min dist
-            Vertice curr = pq.poll();
-            int v = curr.val;
-            int d = curr.dist;
+            int[] curr = pq.poll();
+            int d = curr[0];
+            int v = curr[1];
             //find the end
             if(v==end) return d;
             if(visited.contains(v))
                 continue;
             visited.add(v);
-            if(graph.containsKey(v)){
-                for(Edge edge:graph.get(curr.val)){
-                    int nei = edge.to;
-                    int d2 = edge.weight;
-                    //only add unvisited nodes
-                    if(!visited.contains(nei)){
-                        pq.offer(new Vertice(nei,d+d2));
-                    }
+            for(int i=0;i<n;i++){
+                if(graph[v][i]>0&&!visited.contains(i)){
+                    pq.offer(new int[]{d+graph[v][i],i});
+                }
+            }
+        }
+        return -1;
+    }
+
+    public static int getMinDistWithinSteps(int start,int end,int stepLimit){
+        //We create a hashSet and a pq here. hashSet to record visited nodes and pq to record edges to unvisited nodes with min dist.
+        Set<Integer> visited = new HashSet<>();
+        PriorityQueue<int[]> pq = new PriorityQueue<int[]>((a, b)->a[0]-b[0]);
+        //The PriorityQueue will contain (distance,node,step);
+        pq.offer(new int[]{0,start,0});
+
+        while(!pq.isEmpty()){
+            int[] curr = pq.poll();
+            int d = curr[0];
+            int v = curr[1];
+            int s = curr[2];
+            if(s>stepLimit)
+                continue;
+            if(v==end)
+                return d;
+            for(int i=0;i<n;i++){
+                if(graph[v][i]>0&&!visited.contains(i)){
+                    pq.offer(new int[]{d+graph[v][i],i,s+1});
                 }
             }
         }
