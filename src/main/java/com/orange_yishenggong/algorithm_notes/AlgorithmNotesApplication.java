@@ -1,6 +1,7 @@
 package com.orange_yishenggong.algorithm_notes;
 
 import com.orange_yishenggong.algorithm_notes.graph.*;
+import com.orange_yishenggong.algorithm_notes.math.GCD;
 import com.orange_yishenggong.algorithm_notes.tests.ts;
 import com.orange_yishenggong.algorithm_notes.tests.uf;
 import org.springframework.boot.SpringApplication;
@@ -19,11 +20,13 @@ public class AlgorithmNotesApplication {
 //        System.out.println(uf.test(graph2));
 //        System.out.println(Kruskal.minCostWithPoints(points1));
 //        System.out.println(Prim.minCostWithPoints(points1));
-        DFS test = new DFS();
-        test.buildGraph(graph1);
-        System.out.println(DFS.hasCircle());
-        System.out.println(DFS.isReachable(1,6));
-        System.out.println(DFS.findPath(1,6));
+//        DFS test = new DFS();
+//        test.buildGraph(graph1);
+//        System.out.println(DFS.hasCircle());
+//        System.out.println(DFS.isReachable(1,6));
+//        System.out.println(DFS.findPath(1,6));
 //        System.out.println(Hierholzer.findPath(tickets,"JFK"));
+        System.out.println(GCD.getIntegerGCD(625,175));
+        System.out.println(GCD.getStringGCD("abcabcabc","abcab"));
     }
 }
