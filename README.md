@@ -3,7 +3,7 @@
 这个仓库是用来平时默写算法用的
 
 ## 目录
-#### [Graph 图相关算法](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph)
+#### [Graph 图论](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph)
 ######  　1. [Union and Find 并查集](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/UnionFind.java)
 ######  　2. Search 搜索算法
 ######  　　2.1 [DFS 深度优先搜索](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/DFS.java)
