@@ -2,6 +2,7 @@ package com.orange_yishenggong.algorithm_notes;
 
 import com.orange_yishenggong.algorithm_notes.graph.*;
 import com.orange_yishenggong.algorithm_notes.math.GCD;
+import com.orange_yishenggong.algorithm_notes.math.PrimeFactorization;
 import com.orange_yishenggong.algorithm_notes.tests.ts;
 import com.orange_yishenggong.algorithm_notes.tests.uf;
 import org.springframework.boot.SpringApplication;
@@ -31,12 +32,13 @@ public class AlgorithmNotesApplication {
 //        System.out.println(Hierholzer.findPath(tickets,"JFK"));
 //        System.out.println(GCD.getIntegerGCD(625,175));
 //        System.out.println(GCD.getStringGCD("abcabcabc","abcabc"));
-        Dijkstra testDijkstra = new Dijkstra();
-        testDijkstra.buildGraph(11,graph3,weight3);
-        System.out.println(testDijkstra.getMinDist(1,10));
-        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,0));
-        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,1));
-        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,2));
-        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,3));
+//        Dijkstra testDijkstra = new Dijkstra();
+//        testDijkstra.buildGraph(11,graph3,weight3);
+//        System.out.println(testDijkstra.getMinDist(1,10));
+//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,0));
+//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,1));
+//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,2));
+//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,3));
+        System.out.print(PrimeFactorization.getPrimeFactors(1001));
     }
 }
