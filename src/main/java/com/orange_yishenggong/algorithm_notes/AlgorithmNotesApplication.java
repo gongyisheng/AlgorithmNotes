@@ -34,6 +34,7 @@ public class AlgorithmNotesApplication {
         Dijkstra testDijkstra = new Dijkstra();
         testDijkstra.buildGraph(11,graph3,weight3);
         System.out.println(testDijkstra.getMinDist(1,10));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,0));
         System.out.println(testDijkstra.getMinDistWithinSteps(1,10,1));
         System.out.println(testDijkstra.getMinDistWithinSteps(1,10,2));
         System.out.println(testDijkstra.getMinDistWithinSteps(1,10,3));
