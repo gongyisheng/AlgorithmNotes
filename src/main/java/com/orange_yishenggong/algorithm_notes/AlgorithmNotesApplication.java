@@ -32,13 +32,23 @@ public class AlgorithmNotesApplication {
 //        System.out.println(Hierholzer.findPath(tickets,"JFK"));
 //        System.out.println(GCD.getIntegerGCD(625,175));
 //        System.out.println(GCD.getStringGCD("abcabcabc","abcabc"));
-//        Dijkstra testDijkstra = new Dijkstra();
-//        testDijkstra.buildGraph(11,graph3,weight3);
-//        System.out.println(testDijkstra.getMinDist(1,10));
-//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,0));
-//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,1));
-//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,2));
-//        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,3));
-        System.out.print(PrimeFactorization.getPrimeFactors(1001));
+        Dijkstra testDijkstra = new Dijkstra();
+        testDijkstra.buildGraph(11,graph3,weight3);
+        System.out.println(testDijkstra.getMinDist(1,10));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,0));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,1));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,2));
+        System.out.println(testDijkstra.getMinDistWithinSteps(1,10,3));
+        System.out.println(" ");
+
+        BellmanFord testBellmanFord = new BellmanFord();
+        testBellmanFord.buildGraph(11,graph3,weight3);
+        System.out.println(testBellmanFord.hasNegativeCircle());
+        System.out.println(testBellmanFord.getMinDist(1,10));
+        System.out.println(testBellmanFord.getMinDistWithinSteps(1,10,0));
+        System.out.println(testBellmanFord.getMinDistWithinSteps(1,10,1));
+        System.out.println(testBellmanFord.getMinDistWithinSteps(1,10,2));
+        System.out.println(testBellmanFord.getMinDistWithinSteps(1,10,3));
+//        System.out.print(PrimeFactorization.getPrimeFactors(1001));
     }
 }
