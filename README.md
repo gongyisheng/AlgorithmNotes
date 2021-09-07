@@ -10,6 +10,7 @@
 ######  　　2.2 [Breadth First Search 广度优先搜索(to be continue)]()
 ######  　3. Shortest Path Problem 最短路径问题
 ######  　　3.1 [Dijkstra's Algorithm 迪杰斯特拉算法](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/Dijkstra.java)
+######  　　3.2 [Bellman–Ford Algorithm 贝尔曼-福特算法](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/BellmanFord.java)
 ######  　4. Minimum spanning tree 最小生成树
 ######  　　4.1 [Kruskal's Algorithm 加边法](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/Kruskal.java)
 ######  　　4.2 [Prim's Algorithm 加点法](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/Prim.java)
