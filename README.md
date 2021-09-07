@@ -3,6 +3,8 @@
 这个仓库是用来平时默写算法用的
 
 ## 目录
+#### [Binary Tree 二叉树](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/binaryTree)
+######  　1. [Traverse 遍历](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/binaryTree/Traverse.java)
 #### [Graph 图论](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph)
 ######  　1. [Union and Find 并查集](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/UnionFind.java)
 ######  　2. Search 搜索算法
