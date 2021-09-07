@@ -7,7 +7,7 @@ import java.util.Arrays;
 //E:edges,V:vertices
 
 public class Kruskal {
-    static class Edge {
+    public static class Edge {
 
         int point1;
         int point2;
@@ -35,7 +35,7 @@ public class Kruskal {
     }
     public static int minCostWithEdges(int vertices,Edge[] edges){
         //using union and find to make sure there's no circle during building the graph
-        UF uf = new UF(vertices-1);
+        UnionFind.UF uf = new UnionFind.UF(vertices-1);
         int cost = 0;
         //sort the edges to perform the greedy strategy: edges with min cost to add first
         Arrays.sort(edges,(a,b)->a.cost-b.cost);

@@ -2,15 +2,15 @@ package com.orange_yishenggong.algorithm_notes.graph;
 
 import java.util.*;
 
-class GNode {
-    int inDegree;
-    List<Integer> outNodes;
-    public GNode (){
-        inDegree = 0;
-        outNodes = new ArrayList<>();
-    }
-}
 public class TopologicalSort {
+    static class GNode {
+        int inDegree;
+        List<Integer> outNodes;
+        public GNode (){
+            inDegree = 0;
+            outNodes = new ArrayList<>();
+        }
+    }
     public static boolean hasCircle(int[][] graph){
         //build the graph
         Map<Integer,GNode> nodeMap = new HashMap<>();
