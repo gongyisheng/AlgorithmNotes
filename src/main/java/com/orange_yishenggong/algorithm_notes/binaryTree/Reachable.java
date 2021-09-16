@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class Reachable {
-
+    //reachable method one
     public boolean reachable = false;
     public void dfs_void(Node node,int target){
         if(reachable) return;
@@ -13,7 +13,7 @@ public class Reachable {
         dfs_void(node.left,target);
         dfs_void(node.right,target);
     }
-
+    //reachable method two
     public boolean dfs_boolean(Node node,int target){
         if(node==null) return false;
         if(node.val==target) return true;
