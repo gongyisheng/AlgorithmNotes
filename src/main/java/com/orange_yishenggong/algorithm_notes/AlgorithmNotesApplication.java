@@ -73,7 +73,7 @@ public class AlgorithmNotesApplication {
         Traverse.postorder_iterative(root1);
         System.out.println(Traverse.path);
         Traverse.clearPath();
-        Traverse.levelorder(root1);
+        Traverse.levelOrder(root1);
         System.out.println(Traverse.path);
         Traverse.clearPath();
         Traverse.verticalOrder(root1);

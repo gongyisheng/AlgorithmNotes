@@ -84,7 +84,7 @@ public class Traverse {
                 prev = curr;
             }
     }
-    public static void levelorder(Node root){
+    public static void levelOrder(Node root){
         Queue<Node> q = new LinkedList<>();
         q.offer(root);
 
