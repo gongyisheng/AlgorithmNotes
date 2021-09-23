@@ -1,6 +1,9 @@
 package com.orange_yishenggong.algorithm_notes.binaryTree;
 
 import java.util.Stack;
+//                   Binary Tree   ||    BST
+//Time Complexity:       O(n)          O(logN)
+//Space Complexity:      O(n)            O(1)
 
 public class Successor {
     public static int preorder_successor(Node root,int val){
@@ -75,5 +78,23 @@ public class Successor {
             prev = curr;
         }
         return -1;
+    }
+
+    public static int inorder_successor_BST(Node root,int val){
+        Node rst = null;
+        Node curr = root;
+        while(curr!=null){
+            //to find the node, when curr.val is smaller than target value, we should go left
+            //when we already find the node and goes to the right subtree of the node, we should continuously go left to find out its successor
+            if(curr.val>val){
+                rst = curr;
+                curr = curr.left;
+            }
+            //to find the node, when curr.val is smaller than target value, we should go right
+            //when we find the node and curr.val is equal to target value, we also should go right to find its successor.
+            else
+                curr = curr.right;
+        }
+        return rst==null? -1:rst.val;
     }
 }
