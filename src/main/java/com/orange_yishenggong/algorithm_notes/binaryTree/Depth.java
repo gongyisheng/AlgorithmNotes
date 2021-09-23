@@ -83,4 +83,22 @@ public class Depth {
             }
         }
     }
+
+    //Balance
+    public static boolean isBalanced(Node root) {
+        return helper(root) != -1;
+    }
+
+    //If the height of left and right subtree differ no more than 1 for every node in the tree, it is a balanced tree.
+    private static int helper(Node root){
+        if(root == null) return 0;
+
+        int left = helper(root.left);
+        int right = helper(root.right);
+
+        if(left == -1 || right == -1) return -1;
+        if(Math.abs(left - right) > 1) return -1;
+
+        return Math.max(left, right) + 1;
+    }
 }
