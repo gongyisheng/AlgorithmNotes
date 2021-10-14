@@ -5,6 +5,8 @@ import com.orange_yishenggong.algorithm_notes.binaryTree.Node;
 import com.orange_yishenggong.algorithm_notes.binaryTree.Successor;
 import com.orange_yishenggong.algorithm_notes.binaryTree.Traverse;
 import com.orange_yishenggong.algorithm_notes.graph.*;
+import com.orange_yishenggong.algorithm_notes.heap.MaxHeap;
+import com.orange_yishenggong.algorithm_notes.heap.MinHeap;
 import com.orange_yishenggong.algorithm_notes.math.GCD;
 import com.orange_yishenggong.algorithm_notes.math.PrimeFactorization;
 import com.orange_yishenggong.algorithm_notes.tests.ts;
@@ -55,16 +57,16 @@ public class AlgorithmNotesApplication {
 //        System.out.println(testBellmanFord.getMinDistWithinSteps(1,10,2));
 //        System.out.println(testBellmanFord.getMinDistWithinSteps(1,10,3));
 //        System.out.print(PrimeFactorization.getPrimeFactors(1001));
-        Node root1 = Converter.deserialize(tree1);
-        Traverse.preorder_recursive(root1);
-        System.out.println(Traverse.path);
-        Traverse.clearPath();
-        Traverse.inorder_recursive(root1);
-        System.out.println(Traverse.path);
-        Traverse.clearPath();
-        Traverse.postorder_recursive(root1);
-        System.out.println(Traverse.path);
-        Traverse.clearPath();
+//        Node root1 = Converter.deserialize(tree1);
+//        Traverse.preorder_recursive(root1);
+//        System.out.println(Traverse.path);
+//        Traverse.clearPath();
+//        Traverse.inorder_recursive(root1);
+//        System.out.println(Traverse.path);
+//        Traverse.clearPath();
+//        Traverse.postorder_recursive(root1);
+//        System.out.println(Traverse.path);
+//        Traverse.clearPath();
 //        Traverse.preorder_iterative(root1);
 //        System.out.println(Traverse.path);
 //        Traverse.clearPath();
@@ -79,9 +81,25 @@ public class AlgorithmNotesApplication {
 //        Traverse.clearPath();
 //        Traverse.verticalOrder(root1);
 //        System.out.println(Traverse.path);
-        System.out.println(Successor.preorder_successor(root1,3));
-        System.out.println(Successor.inorder_successor(root1,4));
-        System.out.println(Successor.postorder_successor(root1,5));
+//        System.out.println(Successor.preorder_successor(root1,3));
+//        System.out.println(Successor.inorder_successor(root1,4));
+//        System.out.println(Successor.postorder_successor(root1,5));
+
+        MaxHeap maxHeap = new MaxHeap(10);
+        MinHeap minHeap = new MinHeap(10);
+        for(int i=0;i<weight3.length;i++){
+            maxHeap.insert(weight3[i]);
+            minHeap.insert(weight3[i]);
+        }
+
+        for(int i=0;i<weight3.length;i++){
+            System.out.println(maxHeap.popMax());
+        }
+
+
+        for(int i=0;i<weight3.length;i++){
+            System.out.println(minHeap.popMin());
+        }
 
     }
 }
