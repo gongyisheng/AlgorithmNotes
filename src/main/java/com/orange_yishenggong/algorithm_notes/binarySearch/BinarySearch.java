@@ -40,6 +40,10 @@ public class BinarySearch {
                 right = mid-1;
             }
         }
+        //out of range case
+        if (left >= list.length || list[left] != target) {
+            return -1;
+        }
         return left;
     }
 
@@ -59,6 +63,7 @@ public class BinarySearch {
                 right = mid-1;
             }
         }
+        //out of range cases
         if (right < 0 || list[right] != target){
             return -1;
         }
