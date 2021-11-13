@@ -7,6 +7,7 @@
 ######  　1. [Traverse 树的遍历](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/binaryTree/Traverse.java)
 ######  　2. [Depth 树的深度](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/binaryTree/Depth.java)
 ######  　3. [Reachable 节点可及性](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/binaryTree/Reachable.java)
+#### [Binary Search 二分搜索](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/binarySearch/BinarySearch.java)
 #### [Graph 图论](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph)
 ######  　1. [Union and Find 并查集](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/UnionFind.java)
 ######  　2. Search 搜索算法
@@ -22,7 +23,7 @@
 ######  　6.[Hierholzer's Algorithm 欧拉路径](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/Hierholzer.java)
 #### [Cache 内存模型](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/cache)
 ######  　1. [LRU Least Recent Used](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/cache/LRUCache.java)
-######  　2. [LFU Least Frequent Used]()
+######  　2. [LFU Least Frequent Used](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/cache/LFUCache.java)
 #### [Math 数学方法](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/math)
 ######  　1. [Greatest Common Divisor 最大公约数](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/math/GCD.java)
 ######  　2. [Prime Factorization 质因数分解](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/math/PrimeFactorization.java)
