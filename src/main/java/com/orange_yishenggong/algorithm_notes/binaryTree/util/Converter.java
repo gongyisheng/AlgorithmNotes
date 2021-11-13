@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.binaryTree;
+package com.orange_yishenggong.algorithm_notes.binaryTree.util;
 
 public class Converter {
     //encode

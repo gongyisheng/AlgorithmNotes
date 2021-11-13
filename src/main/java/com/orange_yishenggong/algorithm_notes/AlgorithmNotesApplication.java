@@ -1,18 +1,10 @@
 package com.orange_yishenggong.algorithm_notes;
 
-import com.orange_yishenggong.algorithm_notes.binaryTree.Converter;
-import com.orange_yishenggong.algorithm_notes.binaryTree.Node;
-import com.orange_yishenggong.algorithm_notes.binaryTree.Successor;
-import com.orange_yishenggong.algorithm_notes.binaryTree.Traverse;
-import com.orange_yishenggong.algorithm_notes.graph.*;
-import com.orange_yishenggong.algorithm_notes.heap.MaxHeap;
-import com.orange_yishenggong.algorithm_notes.heap.MinHeap;
-import com.orange_yishenggong.algorithm_notes.math.GCD;
-import com.orange_yishenggong.algorithm_notes.math.PrimeFactorization;
-import com.orange_yishenggong.algorithm_notes.tests.ts;
-import com.orange_yishenggong.algorithm_notes.tests.uf;
+import com.orange_yishenggong.algorithm_notes.tests.leetcode_68;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import java.util.List;
 
 @SpringBootApplication
 public class AlgorithmNotesApplication {
@@ -85,21 +77,24 @@ public class AlgorithmNotesApplication {
 //        System.out.println(Successor.inorder_successor(root1,4));
 //        System.out.println(Successor.postorder_successor(root1,5));
 
-        MaxHeap maxHeap = new MaxHeap(10);
-        MinHeap minHeap = new MinHeap(10);
-        for(int i=0;i<weight3.length;i++){
-            maxHeap.insert(weight3[i]);
-            minHeap.insert(weight3[i]);
-        }
+//        MaxHeap maxHeap = new MaxHeap(10);
+//        MinHeap minHeap = new MinHeap(10);
+//        for(int i=0;i<weight3.length;i++){
+//            maxHeap.insert(weight3[i]);
+//            minHeap.insert(weight3[i]);
+//        }
+//
+//        for(int i=0;i<weight3.length;i++){
+//            System.out.println(maxHeap.popMax());
+//        }
+//
+//
+//        for(int i=0;i<weight3.length;i++){
+//            System.out.println(minHeap.popMin());
+//        }
 
-        for(int i=0;i<weight3.length;i++){
-            System.out.println(maxHeap.popMax());
-        }
-
-
-        for(int i=0;i<weight3.length;i++){
-            System.out.println(minHeap.popMin());
-        }
-
+        String[] words = tree1.split(",");
+        List<String> ans = leetcode_68.fullJustify(words,6);
+        System.out.println(ans);
     }
 }

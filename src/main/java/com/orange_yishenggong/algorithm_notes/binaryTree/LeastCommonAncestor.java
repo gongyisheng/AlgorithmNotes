@@ -4,6 +4,8 @@ package com.orange_yishenggong.algorithm_notes.binaryTree;
 //Time Complexity:    O(logN)       O(N)
 //Space Complexity:    O(1)         O(1)
 
+import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
+
 import java.util.*;
 
 public class LeastCommonAncestor {

@@ -1,12 +1,14 @@
 package com.orange_yishenggong.algorithm_notes.binaryTree;
 
+import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
+
 import java.util.Stack;
 //                   Binary Tree   ||    BST
 //Time Complexity:       O(n)          O(logN)
 //Space Complexity:      O(n)            O(1)
 
 public class Successor {
-    public static int preorder_successor(Node root,int val){
+    public static int preorder_successor(Node root, int val){
         if(root==null) return -1;
         Stack<Node> stack = new Stack<>();
         stack.push(root);
