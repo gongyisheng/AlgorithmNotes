@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.cache;
+package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
 
 import java.util.HashMap;
 import java.util.Map;
