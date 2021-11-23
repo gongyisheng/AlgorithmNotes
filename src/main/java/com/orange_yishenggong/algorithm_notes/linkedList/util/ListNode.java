@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.nodeList.util;
+package com.orange_yishenggong.algorithm_notes.linkedList.util;
 
 public class ListNode {
     int val;

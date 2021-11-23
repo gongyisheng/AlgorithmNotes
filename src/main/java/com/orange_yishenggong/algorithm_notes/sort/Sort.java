@@ -36,7 +36,7 @@ public class Sort {
 
     //Time Complexity: O(N^2)
     //Stability: Yes
-    //Notes for performance: The algorithm performs best when the array is partially ordered.
+    //Notes for performance:
     public int[] bubbleSort(){
         int temp = 0;
         int[] arr = deepCopy(rawArr);
@@ -81,6 +81,7 @@ public class Sort {
     //Time Complexity: O(N^2)
     //Stability: Yes
     //Notes for performance: Good performance when the length of array is small.(<50)
+    //The algorithm performs best when the array is partially ordered.(with little rounds for comparison)
     public int[] insertionSort(){
         int[] arr = deepCopy(rawArr);
         for(int i=1;i<arr.length;i++){
@@ -141,7 +142,7 @@ public class Sort {
 
     //Time Complexity: O(NlogN)
     //Stability: No
-    //Notes for performance: Good performance in most circumstances.
+    //Notes for performance: Good performance in most circumstances. O(N^2) for the worst case(partially ordered)
     public int[] quickSort(){
         int[] arr = deepCopy(rawArr);
         quickSortHelper(arr,0,arr.length-1);
