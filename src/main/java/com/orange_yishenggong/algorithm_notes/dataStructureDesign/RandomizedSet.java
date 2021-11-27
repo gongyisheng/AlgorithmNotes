@@ -2,9 +2,14 @@ package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
 
 import java.util.*;
 
-/**
- * Time Complexity: O(1) for insert, remove and getRandom()
- * Space Complexity:O(N)
+/** Description:
+ * A data structure allows user to guarantee the integers inside the container is distinct.
+ * It also allows user to remove certain integer if it exists.
+ * It provides a method to return a random integer in the container.
+ *
+ * Complexity Analysis:
+ * Time Complexity:  O(1) for insert, remove and getRandom()
+ * Space Complexity: O(N)
  *
  * Thoughts:
  * 1.No duplicates: HashMap/HashSet
