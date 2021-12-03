@@ -21,11 +21,14 @@
 ######  　　4.2 [Prim's Algorithm 加点法](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/Prim.java)
 ######  　5. [Topological Sort 拓扑排序](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/TopologicalSort.java)
 ######  　6.[Hierholzer's Algorithm 欧拉路径](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/graph/Hierholzer.java)
-#### [Cache 内存模型](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/cache)
-######  　1. [LRU Least Recent Used](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/cache/LRUCache.java)
-######  　2. [LFU Least Frequent Used](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/cache/LFUCache.java)
+#### [DataStructureDesign 数据结构设计](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/dataStructureDesign)
+######  　1. [Least Recent Used LRU缓存](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/dataStructureDesign/LRUCache.java)
+######  　2. [Least Frequent Used LFU缓存](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/dataStructureDesign/LFUCache.java)
+######  　3. [RandomizedSet 随机集合](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/dataStructureDesign/RandomizedSet.java)
+######  　4. [RandomizedSetWithBlacklist 带黑名单的随机集合](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/dataStructureDesign/RandomizedSetWithBlacklist.java)
+######  　5. [RangeList 区间数组](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/dataStructureDesign/RangeList.java)
+######  　6. [FileSystem 文件系统](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/dataStructureDesign/FileSystem.java)
 #### [Math 数学方法](https://github.com/gongyisheng/AlgorithmNotes/tree/master/src/main/java/com/orange_yishenggong/algorithm_notes/math)
 ######  　1. [Greatest Common Divisor 最大公约数](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/math/GCD.java)
 ######  　2. [Prime Factorization 质因数分解](https://github.com/gongyisheng/AlgorithmNotes/blob/master/src/main/java/com/orange_yishenggong/algorithm_notes/math/PrimeFactorization.java)
-<!-- ######  　2. [LFU Least Frequent Used]() -->
 
