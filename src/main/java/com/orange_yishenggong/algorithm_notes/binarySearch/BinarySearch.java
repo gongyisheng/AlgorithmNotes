@@ -74,4 +74,32 @@ public class BinarySearch {
         }
         return right;
     }
+
+    //unordered list with distinct neighbor numbers
+    public int getLocalMin(){
+        if(list==null||list.length==0){
+            return -1;
+        }
+        if(list.length==1||list[0]<list[1]){
+            return 0;
+        }
+        if(list[list.length-1]<list[list.length-2]){
+            return list.length-1;
+        }
+        int left = 1;
+        int right = list.length-2;
+        while(left<=right){
+            int mid = left+(right-left)/2;
+            if(list[mid]>list[mid-1]){
+                right = mid-1;
+            }
+            else if(list[mid]>list[mid+1]){
+                left = mid+1;
+            }
+            else{
+                return mid;
+            }
+        }
+        return left;
+    }
 }
