@@ -17,13 +17,21 @@ class BinarySearchTest {
 
     @Test
     void left_bound() {
-        BinarySearch bs = new BinarySearch(list2);
-        assertEquals(0,bs.left_bound(0));
+        BinarySearch bs = new BinarySearch(list3);
+        assertEquals(-1,bs.left_bound(0));
+        assertEquals(0,bs.left_bound(1));
+        assertEquals(2,bs.left_bound(2));
+        assertEquals(6,bs.left_bound(3));
+        assertEquals(-1,bs.left_bound(4));
     }
 
     @Test
     void right_bound() {
         BinarySearch bs = new BinarySearch(list3);
-        assertEquals(0,bs.right_bound(1));
+        assertEquals(-1,bs.right_bound(0));
+        assertEquals(1,bs.right_bound(1));
+        assertEquals(5,bs.right_bound(2));
+        assertEquals(8,bs.right_bound(3));
+        assertEquals(-1,bs.right_bound(4));
     }
 }
