@@ -1,6 +1,11 @@
 package com.orange_yishenggong.algorithm_notes.math;
 
 public class BitManipulation {
+    public void swapValue(int a,int b){
+        a = a^b;
+        b = a^b;
+        a = a^b;
+    }
     //Find the right most one in an number
     public int findRightOne(int num){
         return num&((~num)+1);
