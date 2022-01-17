@@ -56,13 +56,13 @@ public class MaxHeap {
         }
     }
     /** insert it at the end of heap then swim */
-    public void insert(int num){
+    public void offer(int num){
         pointer++;
         heap[pointer] = num;
         swim(pointer);
     }
     /** swap the first and last num, delete the last num, sink the first num */
-    public int popMax(){
+    public int poll(){
         int max = heap[1];
         swap(1,pointer);
         heap[pointer] = 0;

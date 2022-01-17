@@ -49,22 +49,24 @@ public class MinHeap {
     public void sink(int root){
         while(leftChild(root)<=length){
             int index = leftChild(root);
-            if(rightChild(root)<=length&&heap[rightChild(root)]<heap[index]){
+            if(rightChild(root)<=length&&heap[index]>heap[rightChild(root)]){
                 index = rightChild(root);
             }
-            if(heap[root]<=heap[index]){ break;}
+            if(heap[root]<=heap[index]){
+                break;
+            }
             swap(root,index);
             root = index;
         }
     }
     /** insert it at the end of heap then swim */
-    public void insert(int num){
+    public void offer(int num){
         pointer++;
         heap[pointer] = num;
         swim(pointer);
     }
     /** swap the first and last num, delete the last num, sink the first num */
-    public int popMin(){
+    public int poll(){
         int min = heap[1];
         swap(1,pointer);
         heap[pointer] = Integer.MAX_VALUE;
