@@ -3,9 +3,11 @@ package com.orange_yishenggong.algorithm_notes.binaryTree;
 import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
 
 import java.util.*;
-//Time Complexity: O(N)
-//Space Complexity: O()
-
+/**
+/* Time Complexity: O(N)
+/* Space Complexity: O(1)
+ * @author Orange Meow
+ */
 public class Traverse {
 
     //recursive methods
@@ -14,19 +16,19 @@ public class Traverse {
         path.clear();
     }
     public static void preorder_recursive(Node root){
-        if(root==null) return;
+        if(root==null){ return;}
         path.add(root.val);
         preorder_recursive(root.left);
         preorder_recursive(root.right);
     }
     public static void inorder_recursive(Node root){
-        if(root==null) return;
+        if(root==null){ return;}
         inorder_recursive(root.left);
         path.add(root.val);
         inorder_recursive(root.right);
     }
     public static void postorder_recursive(Node root){
-        if(root==null) return;
+        if(root==null){ return;}
         postorder_recursive(root.left);
         postorder_recursive(root.right);
         path.add(root.val);
@@ -34,27 +36,32 @@ public class Traverse {
     //iterative methods
     public static void preorder_iterative(Node root){
         Stack<Node> stack = new Stack<>();
-        if(root!=null) stack.push(root);
+        if(root!=null){ stack.push(root);}
         while (!stack.isEmpty()){
             Node node = stack.pop();
             path.add(node.val);
             // Remember to reverse order.. right -> left
             // So that when the stack pop nodes, it pop left first then right.
-            if(node.right!=null) stack.push(node.right);
-            if(node.left!=null) stack.push(node.left);
+            if(node.right!=null){
+                stack.push(node.right);
+            }
+            if(node.left!=null){
+                stack.push(node.left);
+            }
         }
     }
     public static void inorder_iterative(Node root){
         Stack<Node> stack = new Stack<>();
         Node curr = root;
         while(curr != null || !stack.isEmpty()){
-            while(curr != null){
+            if(curr != null){
                 stack.push(curr);
                 curr = curr.left;
-            }
+            }else{
             Node node = stack.pop();
             path.add(node.val);
             curr = node.right;
+            }
         }
     }
     public static void postorder_iterative(Node root){
@@ -62,7 +69,9 @@ public class Traverse {
 
             Node curr = root;
             Node prev = null;
-            if(root != null) stack.push(root);
+            if(root != null){
+                stack.push(root);
+            }
 
             while(!stack.isEmpty()){
                 curr = stack.peek();
@@ -77,7 +86,9 @@ public class Traverse {
                     }
                 } else if(curr.left == prev){
                     // 刚把左边处理完回来，看看右边还有没有节点
-                    if(curr.right != null) stack.push(curr.right);
+                    if(curr.right != null){
+                        stack.push(curr.right);
+                    }
                 } else {
                     // 左右子树都处理完了，处理当前节点。
                     path.add(curr.val);
@@ -95,10 +106,12 @@ public class Traverse {
             for(int i=0;i<size;i++) {
                 Node node = q.poll();
                 path.add(node.val);
-                if (node.left != null)
+                if (node.left != null){
                     q.offer(node.left);
-                if (node.right != null)
+                }
+                if (node.right != null) {
                     q.offer(node.right);
+                }
             }
         }
     }
@@ -123,10 +136,12 @@ public class Traverse {
             max = Math.max(pair.val,max);
             orderMap.putIfAbsent(pair.val,new ArrayList());
             orderMap.get(pair.val).add(pair.key.val);
-            if(pair.key.left!=null)
+            if(pair.key.left!=null){
                 q.offer(new Pair(pair.key.left,pair.val-1));
-            if(pair.key.right!=null)
+            }
+            if(pair.key.right!=null){
                 q.offer(new Pair(pair.key.right,pair.val+1));
+            }
         }
         for(int i=min;i<=max;i++){
             for(Integer val:orderMap.get(i)){

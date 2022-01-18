@@ -1,37 +1,44 @@
 package com.orange_yishenggong.algorithm_notes.binaryTree.util;
 
+/**
+ * @author Orange Meow
+ */
 public class Converter {
-    //encode
-    private static String serialize(Node node){
-        StringBuilder path = new StringBuilder();
+    private static final String SPLITER = ",";
+    private static final String NULLSTR = "X";
+    /** encode */
+    public static String serialize(Node node){
         if(node==null) {
-            path.append("null");
-            return path.toString();
+            return NULLSTR;
         }
+        StringBuilder path = new StringBuilder();
         path.append(node.val);
-        path.append(",");
+        path.append(SPLITER);
         path.append(serialize(node.left));
-        path.append(",");
+        path.append(SPLITER);
         path.append(serialize(node.right));
         return path.toString();
     }
-    //decode
-    private static int p = 0;
-    private static Node dfs_deserialize(String[] list){
-        if(p>= list.length) return null;
-        if(list[p].equals("null")) {
+    /** decode */
+    private static int p;
+    private static Node deserializeHelper(String[] list){
+        if(p>= list.length){
+            return null;
+        }
+        if(list[p].equals(NULLSTR)) {
             p++;
             return null;
         }
-        Node curr = new Node(Integer.valueOf(list[p]));
+        Node curr = new Node(Integer.parseInt(list[p]));
         p++;
 
-        curr.left = dfs_deserialize(list);
-        curr.right = dfs_deserialize(list);
+        curr.left = deserializeHelper(list);
+        curr.right = deserializeHelper(list);
         return curr;
     }
     public static Node deserialize(String data) {
-        String[] data_list = data.split(",");
-        return dfs_deserialize(data_list);
+        p = 0;
+        String[] list = data.split(SPLITER);
+        return deserializeHelper(list);
     }
 }

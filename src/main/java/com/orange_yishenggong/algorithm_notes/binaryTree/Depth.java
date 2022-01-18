@@ -5,66 +5,82 @@ import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
 import java.util.LinkedList;
 import java.util.Queue;
 
+/**
+ * @author Orange Meow
+ */
 public class Depth {
-    //Depth related problems
-    public int maxDepth = Integer.MIN_VALUE;
-    public int minDepth = Integer.MAX_VALUE;
-    public void clearDepth(){
-        maxDepth = Integer.MIN_VALUE;
-        minDepth = Integer.MAX_VALUE;
+    /** Depth related problems */
+    private int maxDepth;
+    private int minDepth;
+
+    /** max depth */
+    public int calcMaxDepthDfsInt(Node root){
+        if(root==null){ return 0;}
+        return Math.max(calcMaxDepthDfsInt(root.left),calcMaxDepthDfsInt(root.right))+1;
     }
 
-    //max depth
-    public int calcMaxDepth_DFS_int(Node root){
-        if(root==null) return 0;
-        return Math.max(calcMaxDepth_DFS_int(root.left),calcMaxDepth_DFS_int(root.right))+1;
+    public int calcMaxDepthDfsVoid(Node root){
+        maxDepth = 0;
+        calcMaxDepthDfsVoidHelper(root,1);
+        return maxDepth;
     }
-
-    public void calcMaxDepth_DFS_void(Node root,int depth){
-        if(root==null) return;
+    private void calcMaxDepthDfsVoidHelper(Node root,int depth){
+        if(root==null){ return;}
         maxDepth = Math.max(maxDepth,depth);
-        calcMaxDepth_DFS_void(root.left,depth+1);
-        calcMaxDepth_DFS_void(root.right,depth+1);
+        calcMaxDepthDfsVoidHelper(root.left,depth+1);
+        calcMaxDepthDfsVoidHelper(root.right,depth+1);
     }
 
-    public void calcMaxDepth_BFS(Node root){
+    public int calcMaxDepthBfs(Node root){
         Queue<Node> q = new LinkedList<>();
         q.offer(root);
-        maxDepth = 0;
+        int depth = 0;
 
         while(!q.isEmpty()){
             int size = q.size();
-            maxDepth++;
+            depth++;
             for(int i=0;i<size;i++){
                 Node node = q.poll();
-                if (node.left != null)
+                if (node.left != null){
                     q.offer(node.left);
-                if (node.right != null)
+                }
+                if (node.right != null){
                     q.offer(node.right);
+                }
             }
         }
-    }
-    
-    //min depth
-    public int calcMinDepth_DFS_int(Node root){
-        if(root == null) return 0;
-
-        if(root.left == null) return calcMinDepth_DFS_int(root.right) + 1;
-        if(root.right == null) return calcMinDepth_DFS_int(root.left) + 1;
-
-        return Math.min(calcMinDepth_DFS_int(root.left), calcMinDepth_DFS_int(root.right)) + 1;
+        return depth;
     }
 
-    public void calcMinDepth_DFS_void(Node root,int depth){
-        if(root==null) return;
+    /** min depth */
+    public int calcMinDepthDfsInt(Node root){
+        if(root == null){ return 0;}
+
+        if(root.left == null){
+            return calcMinDepthDfsInt(root.right) + 1;
+        }
+        if(root.right == null){
+            return calcMinDepthDfsInt(root.left) + 1;
+        }
+
+        return Math.min(calcMinDepthDfsInt(root.left), calcMinDepthDfsInt(root.right)) + 1;
+    }
+
+    public int calcMinDepthDfsVoid(Node root){
+        minDepth = Integer.MAX_VALUE;
+        calcMinDepthDfsVoidHelper(root,1);
+        return minDepth;
+    }
+    public void calcMinDepthDfsVoidHelper(Node root,int depth){
+        if(root==null){ return;}
         if(root.left==null&&root.right==null){
             minDepth = Math.min(minDepth,depth);
         }
-        calcMinDepth_DFS_void(root.left,depth+1);
-        calcMinDepth_DFS_void(root.right,depth+1);
+        calcMinDepthDfsVoidHelper(root.left,depth+1);
+        calcMinDepthDfsVoidHelper(root.right,depth+1);
     }
 
-    public void calcMinDepth_BFS(Node root){
+    public int calcMinDepthBfs(Node root){
         Queue<Node> q = new LinkedList<>();
         q.offer(root);
         int depth = 0;
@@ -75,31 +91,35 @@ public class Depth {
             for(int i=0;i<size;i++){
                 Node node = q.poll();
                 if(node.left==null&&node.right==null) {
-                    minDepth = depth;
-                    return;
+                    return depth;
                 }
-                if (node.left != null)
+                if (node.left != null){
                     q.offer(node.left);
-                if (node.right != null)
+                }
+                if (node.right != null){
                     q.offer(node.right);
+                }
             }
         }
+        return depth;
     }
 
-    //Balance
+    /** Balance */
     public static boolean isBalanced(Node root) {
         return helper(root) != -1;
     }
 
-    //If the height of left and right subtree differ no more than 1 for every node in the tree, it is a balanced tree.
+    /**If the height of left and right subtree differ 
+     * no more than 1 for every node in the tree, 
+     * it is a balanced tree. */
     private static int helper(Node root){
-        if(root == null) return 0;
+        if(root == null){ return 0;}
 
         int left = helper(root.left);
         int right = helper(root.right);
 
-        if(left == -1 || right == -1) return -1;
-        if(Math.abs(left - right) > 1) return -1;
+        if(left == -1 || right == -1){ return -1;}
+        if(Math.abs(left - right) > 1){ return -1;}
 
         return Math.max(left, right) + 1;
     }

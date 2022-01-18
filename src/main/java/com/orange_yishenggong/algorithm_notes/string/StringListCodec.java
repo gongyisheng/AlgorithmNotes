@@ -3,6 +3,9 @@ package com.orange_yishenggong.algorithm_notes.string;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Orange Meow
+ */
 public class StringListCodec {
     /** Encodes a list of strings to a single string. */
     public String encode(List<String> strs) {
