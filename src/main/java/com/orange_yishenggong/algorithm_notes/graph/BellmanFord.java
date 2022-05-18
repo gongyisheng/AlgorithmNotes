@@ -17,8 +17,9 @@ public class BellmanFord {
     public static void buildGraph(int vertice,int[][] edges,int[] weight){
         n = vertice;
         graph = new int[n][n];
-        for(int i=0;i< edges.length;i++)
+        for(int i=0;i< edges.length;i++){
             graph[edges[i][0]][edges[i][1]] = weight[i];
+        }
     }
 
     public static boolean hasNegativeCircle(){
@@ -41,13 +42,17 @@ public class BellmanFord {
                         if (dU + wUV < dV) {
                             distance[i & 1][k] = dU + wUV;
                             existsUpdate = true;
-                            if (i == n - 1) return true;
+                            if(i == n - 1){
+                                return true;
+                            }
                         }
                     }
                 }
             }
             //If have no updates, break the loop ahead of time.
-            if(!existsUpdate) break;
+            if(!existsUpdate){
+                break;
+            }
         }
         return false;
     }
@@ -76,7 +81,9 @@ public class BellmanFord {
                 }
             }
             //If have no updates, break the loop ahead of time.
-            if(!existsUpdate) break;
+            if(!existsUpdate){
+                break;
+            }
         }
         return distance[(n-2)&1][end]>=Integer.MAX_VALUE? -1:(int)distance[(n-2)&1][end];
     }
@@ -105,7 +112,9 @@ public class BellmanFord {
                 }
             }
             //If have no updates, break the loop ahead of time.
-            if(!existsUpdate) break;
+            if(!existsUpdate){
+                break;
+            }
         }
         return distance[(stepLimit-1)&1][end]>=Integer.MAX_VALUE? -1:(int)distance[(stepLimit-1)&1][end];
     }
