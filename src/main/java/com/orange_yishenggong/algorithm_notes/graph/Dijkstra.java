@@ -13,8 +13,9 @@ public class Dijkstra {
     public static void buildGraph(int vertice,int[][] edges,int[] weight){
         n = vertice;
         graph = new int[n][n];
-        for(int i=0;i< edges.length;i++)
+        for(int i=0;i< edges.length;i++){
             graph[edges[i][0]][edges[i][1]] = weight[i];
+        }
     }
 
     public static int getMinDist(int start,int end){
@@ -30,9 +31,12 @@ public class Dijkstra {
             int d = curr[0];
             int v = curr[1];
             //find the end
-            if(v==end) return d;
-            if(visited.contains(v))
+            if(v==end){
+                return d;
+            }
+            if(visited.contains(v)){
                 continue;
+            }
             visited.add(v);
             for(int i=0;i<n;i++){
                 if(graph[v][i]>0&&!visited.contains(i)){
@@ -44,7 +48,8 @@ public class Dijkstra {
     }
 
     public static int getMinDistWithinSteps(int start,int end,int stepLimit){
-        //We create two int list and a pq here. int list to record min distance and stops and pq to record edges to unvisited nodes with min dist.
+        //We create two int list and a pq here.
+        //int list to record min distance and stops and pq to record edges to unvisited nodes with min dist.
         PriorityQueue<int[]> pq = new PriorityQueue<int[]>((a, b)->a[0]-b[0]);
 
         // Shortest distances array
@@ -67,10 +72,12 @@ public class Dijkstra {
             int v = curr[1];
             int s = curr[2];
 
-            if(s>stepLimit)
+            if(s>stepLimit){
                 continue;
-            if(v==end)
+            }
+            if(v==end){
                 return d;
+            }
 
             for(int i=0;i<n;i++){
                 if(graph[v][i]>0){

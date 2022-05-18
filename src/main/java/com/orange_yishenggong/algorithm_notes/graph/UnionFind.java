@@ -45,7 +45,9 @@ public class UnionFind {
         public boolean union(int p1,int p2){
             int root1 = find(p1);
             int root2 = find(p2);
-            if(root1==root2) return false;
+            if(root1==root2){
+                return false;
+            }
 
             //union by the element number of tree
             if(sz[root1]>sz[root2]){
@@ -61,16 +63,18 @@ public class UnionFind {
 
     public static List<Integer> toList(int[] intList){
         List<Integer> ans = new ArrayList<>();
-        for(int i:intList)
+        for(int i:intList){
             ans.add(i);
+        }
         return ans;
     }
     //find out useless edges which cause a circle in the graph
     public static List<Integer> findRedundantConnection(int[][] edges) {
         UF uf = new UF(edges.length);
         for (int[] edge : edges) {
-            if (!uf.union(edge[0], edge[1]))
+            if (!uf.union(edge[0], edge[1])){
                 return toList(edge);
+            }
         }
         return toList(new int[0]);
     }

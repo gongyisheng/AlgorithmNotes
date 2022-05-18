@@ -24,12 +24,15 @@ public class DFS {
     //Detect Circle
     private static boolean hasCircle = false;
     private static void dfs_hasCircle(int curr,Map<Integer,Integer> status){
-        if(hasCircle) return;
+        if(hasCircle){
+            return;
+        }
         //We only need unvisited nodes
         if(status.containsKey(curr)){
             //When we find the curr status is visiting, the graph has a circle.
-            if(status.get(curr)==1)
+            if(status.get(curr)==1){
                 hasCircle = true;
+            }
             return;
         }
         //Set the status to 1: visiting
@@ -46,15 +49,18 @@ public class DFS {
     public static boolean hasCircle(){
         Map<Integer,Integer> status = new HashMap<>();
         for(Integer key:graphMap.keySet()){
-            if(!status.containsKey(key))
+            if(!status.containsKey(key)){
                 dfs_hasCircle(key,status);
+            }
         }
         return hasCircle;
     }
     //Determine Reachable
     public static boolean reachable = false;
     private static void dfs_isReachable(int curr,int target,Set<Integer> visited){
-        if(reachable||visited.contains(curr)) return;
+        if(reachable||visited.contains(curr)){
+            return;
+        }
         if(curr==target){
             reachable = true;
             return;

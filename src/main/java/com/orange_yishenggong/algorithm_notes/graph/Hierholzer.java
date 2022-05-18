@@ -18,7 +18,9 @@ public class Hierholzer {
 
         Map<String, PriorityQueue<String>> map = new HashMap<>();
         for(String[] edge : edges){
-            if(!map.containsKey(edge[0])) map.put(edge[0], new PriorityQueue<String>());
+            if(!map.containsKey(edge[0])){
+                map.put(edge[0], new PriorityQueue<String>());
+            }
 
             map.get(edge[0]).add(edge[1]);
         }

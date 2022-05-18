@@ -41,8 +41,9 @@ public class Kruskal {
         Arrays.sort(edges,(a,b)->a.cost-b.cost);
         for(Edge edge:edges){
             //only add edges which do not form circles
-            if(uf.union(edge.point1,edge.point2))
+            if(uf.union(edge.point1,edge.point2)){
                 cost += edge.cost;
+            }
         }
         return cost;
     }

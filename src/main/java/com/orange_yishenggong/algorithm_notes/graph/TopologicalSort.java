@@ -28,8 +28,9 @@ public class TopologicalSort {
         //using queue here will be bfs, using stack here will be dfs
         Queue<Integer> q = new LinkedList<>();
         for(Integer key:nodeMap.keySet()){
-            if(nodeMap.get(key).inDegree==0)
+            if(nodeMap.get(key).inDegree==0){
                 q.offer(key);
+            }
         }
 
         int removedEdge = 0;
@@ -41,8 +42,9 @@ public class TopologicalSort {
                 GNode to = nodeMap.get(child);
                 removedEdge++;
                 to.inDegree--;
-                if(to.inDegree==0)
+                if(to.inDegree==0){
                     q.offer(child);
+                }
             }
         }
         //if has circle, count will be less than graph.length
