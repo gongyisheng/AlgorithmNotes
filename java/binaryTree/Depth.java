@@ -1,7 +1,6 @@
-package com.orange_yishenggong.algorithm_notes.binaryTree;
+package binaryTree;
 
-import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
-
+import binaryTree.util.Node;
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -32,7 +31,7 @@ public class Depth {
     }
 
     public int calcMaxDepthBfs(Node root){
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node> q = new LinkedList<Node>();
         q.offer(root);
         int depth = 0;
 
@@ -81,7 +80,7 @@ public class Depth {
     }
 
     public int calcMinDepthBfs(Node root){
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node> q = new LinkedList<Node>();
         q.offer(root);
         int depth = 0;
 

@@ -1,6 +1,6 @@
-package com.orange_yishenggong.algorithm_notes.graph;
+package graph;
 
-import com.orange_yishenggong.algorithm_notes.graph.util.Graph;
+import graph.util.Graph;
 
 import java.util.ArrayList;
 import java.util.List;

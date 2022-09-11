@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
+package dataStructureDesign;
 
 import java.util.*;
 
@@ -24,8 +24,8 @@ public class RandomizedSet {
     Random rand = new Random();
 
     public RandomizedSet() {
-        dict = new HashMap();
-        list = new ArrayList();
+        dict = new HashMap<Integer, Integer>();
+        list = new ArrayList<Integer>();
     }
 
     /** Inserts a value to the set. Returns true if the set did not already contain the specified element. */

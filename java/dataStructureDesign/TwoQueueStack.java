@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
+package dataStructureDesign;
 
 import java.util.LinkedList;
 import java.util.Queue;

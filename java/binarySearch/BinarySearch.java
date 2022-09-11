@@ -1,5 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.binarySearch;
-
+package binarySearch;
 public class BinarySearch {
     private int[] list;
 
@@ -102,4 +101,13 @@ public class BinarySearch {
         }
         return left;
     }
+
+    public static void main(String[] args){
+        int[] list = new int[]{1,2,3,4,5,6,7,8};
+        BinarySearch bs = new BinarySearch(list);
+        System.out.println(bs.left_bound(2));
+    }
+}
+
+class test {
 }

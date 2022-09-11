@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.binaryTree.util;
+package binaryTree.util;
 
 public class Node {
     public int val;

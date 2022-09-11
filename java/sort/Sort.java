@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.sort;
+package sort;
 
 import java.util.Arrays;
 

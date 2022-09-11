@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
+package dataStructureDesign;
 
 import java.util.PriorityQueue;
 
@@ -22,8 +22,8 @@ public class MedianFinder {
     PriorityQueue<Integer> min;//right one
 
     public MedianFinder() {
-        max = new PriorityQueue<>((a,b)->(b-a));
-        min = new PriorityQueue<>((a,b)->(a-b));
+        max = new PriorityQueue<Integer>((a,b)->(b-a));
+        min = new PriorityQueue<Integer>((a,b)->(a-b));
     }
 
     public void addNum(int num){

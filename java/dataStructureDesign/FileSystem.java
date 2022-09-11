@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
+package dataStructureDesign;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -69,7 +69,7 @@ class FileSystem {
      * @return A list with file & directory names in lexicographic order.
      */
     public List<String> ls(String path) {
-        List<String> list = new ArrayList<>();
+        List<String> list = new ArrayList<String>();
         String[] path_list = path.split("/");
         Node curr = getNodeByPath(path_list,Integer.MAX_VALUE);
         if(curr!=null){

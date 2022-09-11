@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.heap;
+package heap;
 
 /**
  *                  insert N values    Popmax one value

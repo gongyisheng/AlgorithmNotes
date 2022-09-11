@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
+package dataStructureDesign;
 
 /** Segment Tree data structure
  * Used for range sum, range max/min, (range) update

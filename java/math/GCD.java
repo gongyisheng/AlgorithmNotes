@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.math;
+package math;
 
 //Time Complexity: O(logN)
 //Space Complexity: O(1)

@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.heap;
+package heap;
 
 import java.util.Arrays;
 

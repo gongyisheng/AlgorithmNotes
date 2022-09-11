@@ -1,10 +1,10 @@
-package com.orange_yishenggong.algorithm_notes.binaryTree;
+package binaryTree;
 
 //                     BST       Binary Tree
 //Time Complexity:    O(logN)       O(N)
 //Space Complexity:    O(1)         O(1)
 
-import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
+import binaryTree.util.Node;
 
 import java.util.*;
 
@@ -51,10 +51,10 @@ public class LeastCommonAncestor {
 
     public Node findInBinaryTree_iterative(Node root,Node p,Node q){
         //stack for traversal
-        Stack<Node> stack = new Stack<>();
+        Stack<Node> stack = new Stack<Node>();
         stack.push(root);
         //hashmap for parent pointers
-        Map<Node,Node> parent = new HashMap<>();
+        Map<Node,Node> parent = new HashMap<Node,Node>();
         parent.put(root,null);
 
         while(!parent.containsKey(p)||!parent.containsKey(q)){
@@ -68,7 +68,7 @@ public class LeastCommonAncestor {
                 parent.put(node.right,node);
             }
         }
-        Set<Node> ancestors = new HashSet<>();
+        Set<Node> ancestors = new HashSet<Node>();
         while(p!=null){
             ancestors.add(p);
             p = parent.get(p);

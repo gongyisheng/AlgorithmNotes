@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.graph.util;
+package graph.util;
 
 /**
  * Build Graph

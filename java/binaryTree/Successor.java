@@ -1,6 +1,6 @@
-package com.orange_yishenggong.algorithm_notes.binaryTree;
+package binaryTree;
 
-import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
+import binaryTree.util.Node;
 
 import java.util.Stack;
 //                   Binary Tree   ||    BST
@@ -10,7 +10,7 @@ import java.util.Stack;
 public class Successor {
     public static int preorder_successor(Node root, int val){
         if(root==null) return -1;
-        Stack<Node> stack = new Stack<>();
+        Stack<Node> stack = new Stack<Node>();
         stack.push(root);
         Node prev = null;
         Node curr = root;
@@ -31,7 +31,7 @@ public class Successor {
 
     public static int inorder_successor(Node root,int val){
         if(root==null) return -1;
-        Stack<Node> stack = new Stack<>();
+        Stack<Node> stack = new Stack<Node>();
         Node curr = root;
         Node prev = null;
         stack.push(root);
@@ -52,7 +52,7 @@ public class Successor {
 
     public static int postorder_successor(Node root,int val){
         if(root==null) return -1;
-        Stack<Node> stack = new Stack<>();
+        Stack<Node> stack = new Stack<Node>();
         Node curr = root;
         Node prev = null;
         Node prevOutput = null;

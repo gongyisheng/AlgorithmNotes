@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.graph;
+package graph;
 
 import java.util.PriorityQueue;
 

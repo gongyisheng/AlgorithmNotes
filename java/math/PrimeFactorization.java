@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.math;
+package math;
 
 import java.util.ArrayList;
 import java.util.List;

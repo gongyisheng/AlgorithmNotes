@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.linkedList;
+package linkedList;
 
 class SingleNode {
     int val;

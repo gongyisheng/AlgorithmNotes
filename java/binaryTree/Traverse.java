@@ -1,6 +1,6 @@
-package com.orange_yishenggong.algorithm_notes.binaryTree;
+package binaryTree;
 
-import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
+import binaryTree.util.Node;
 
 import java.util.*;
 /**
@@ -11,7 +11,7 @@ import java.util.*;
 public class Traverse {
 
     //recursive methods
-    public static List<Integer> path = new ArrayList<>();
+    public static List<Integer> path = new ArrayList<Integer>();
     public static void clearPath(){
         path.clear();
     }
@@ -35,7 +35,7 @@ public class Traverse {
     }
     //iterative methods
     public static void preorder_iterative(Node root){
-        Stack<Node> stack = new Stack<>();
+        Stack<Node> stack = new Stack<Node>();
         if(root!=null){ stack.push(root);}
         while (!stack.isEmpty()){
             Node node = stack.pop();
@@ -51,7 +51,7 @@ public class Traverse {
         }
     }
     public static void inorder_iterative(Node root){
-        Stack<Node> stack = new Stack<>();
+        Stack<Node> stack = new Stack<Node>();
         Node curr = root;
         while(curr != null || !stack.isEmpty()){
             if(curr != null){
@@ -98,7 +98,7 @@ public class Traverse {
             }
     }
     public static void levelOrder(Node root){
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node> q = new LinkedList<Node>();
         q.offer(root);
 
         while(!q.isEmpty()){
@@ -125,16 +125,16 @@ public class Traverse {
                 val = value;
             }
         }
-        Map<Integer,List<Integer>> orderMap = new HashMap<>();
+        Map<Integer,List<Integer>> orderMap = new HashMap<Integer,List<Integer>>();
         int min = 0;
         int max = 0;
-        Queue<Pair> q = new LinkedList<>();
+        Queue<Pair> q = new LinkedList<Pair>();
         q.offer(new Pair(root,0));
         while(!q.isEmpty()){
             Pair pair = q.poll();
             min = Math.min(pair.val,min);
             max = Math.max(pair.val,max);
-            orderMap.putIfAbsent(pair.val,new ArrayList());
+            orderMap.putIfAbsent(pair.val, new ArrayList<Integer>());
             orderMap.get(pair.val).add(pair.key.val);
             if(pair.key.left!=null){
                 q.offer(new Pair(pair.key.left,pair.val-1));

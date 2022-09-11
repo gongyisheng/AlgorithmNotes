@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
+package dataStructureDesign;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -28,7 +28,7 @@ public class RandomizedSetWithBlacklist {
     private Random r;
 
     public RandomizedSetWithBlacklist(int N, int[] blacklist) {
-        map = new HashMap();
+        map = new HashMap<>();
         for (int b : blacklist) // O(B)
             map.put(b, -1);
         M = N - map.size();

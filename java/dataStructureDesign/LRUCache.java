@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.dataStructureDesign;
+package dataStructureDesign;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -57,7 +57,7 @@ class LRUCache {
     private Node head,tail;
 
     public LRUCache(int capacity) {
-        cache = new HashMap<>();
+        cache = new HashMap<Integer, Node>();
         this.size = 0;
         this.capacity = capacity;
 

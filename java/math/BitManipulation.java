@@ -1,4 +1,4 @@
-package com.orange_yishenggong.algorithm_notes.math;
+package math;
 
 public class BitManipulation {
     public void swapValue(int a,int b){

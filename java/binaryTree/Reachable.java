@@ -1,6 +1,6 @@
-package com.orange_yishenggong.algorithm_notes.binaryTree;
+package binaryTree;
 
-import com.orange_yishenggong.algorithm_notes.binaryTree.util.Node;
+import binaryTree.util.Node;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -31,7 +31,7 @@ public class Reachable {
     }
 
     public boolean bfs(Node node,int target){
-        Queue<Node> q = new LinkedList<>();
+        Queue<Node> q = new LinkedList<Node>();
         q.offer(node);
 
         while(!q.isEmpty()){
