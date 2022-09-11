@@ -108,6 +108,3 @@ public class BinarySearch {
         System.out.println(bs.left_bound(2));
     }
 }
-
-class test {
-}
