@@ -13,7 +13,6 @@ import time
 # Time complexity: O(n)
 # Space complexity: O(n)
 def euler(n):
-    cnt = 0
     is_prime = [True] * (n+1)
     is_prime[1] = False
     prime = []
@@ -21,13 +20,12 @@ def euler(n):
     phi[1] = 1
     for i in range(2, n+1):
         if is_prime[i]:
-            cnt = cnt + 1
             prime.append(i)
             phi[i] = i - 1
         j = 0
         # traverse the prime number list
         # sieve the target number: i*prime[j]
-        while j < cnt and i * prime[j] <= n:
+        while j < len(prime) and i * prime[j] <= n:
             is_prime[i * prime[j]] = False
             if i % prime[j] == 0:
                 # If i % prime[j] == 0, which means i contains all the factors of target
