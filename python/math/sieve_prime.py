@@ -9,7 +9,7 @@ import time
 # 1. filter even number
 # 2. iterate to sqrt(n)
 # 3. divide by block
-def Eratosthenes(n):
+def eratosthenes(n):
     p = 0
     prime = []
     is_prime = [True] * (n+1)
@@ -31,7 +31,7 @@ def Eratosthenes(n):
 # Space complexity: O(sqrt(n)+block_size)
 # Scan prime from (0,sqrt(n)), cut the is_prime by block size, check numbers in each block.
 # It can both save memory usage and avoid unnecessary labeling.
-def Eratosthenes_optimized(n, block_size=100000):
+def eratosthenes_optimized(n, block_size=100000):
     p = 0
     prime = []
     limit = int(math.sqrt(n)) + 1
@@ -67,7 +67,7 @@ def Eratosthenes_optimized(n, block_size=100000):
 
 # Time complexity: O(n)
 # Space complexity: O(n)
-def Euler(n):
+def euler(n):
     p = 0
     prime = []
     is_prime = [True] * (n+1)
@@ -93,16 +93,16 @@ if __name__ == "__main__":
     n = int(sys.argv[1]) if len(sys.argv)>1 else 100000
 
     start = time.perf_counter()
-    print(Eratosthenes(n))
+    print(eratosthenes(n))
     end = time.perf_counter() - start
     print(f"Program finished in {end:0.2f} seconds.")
 
     start = time.perf_counter()
-    print(Eratosthenes_optimized(n, max(10000,int(n/1000))))
+    print(eratosthenes_optimized(n, max(10000,int(n/1000))))
     end = time.perf_counter() - start
     print(f"Program finished in {end:0.2f} seconds.")
 
     start = time.perf_counter()
-    print(Euler(n))
+    print(euler(n))
     end = time.perf_counter() - start
     print(f"Program finished in {end:0.2f} seconds.")
