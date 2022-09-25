@@ -10,6 +10,8 @@ import time
 # a^φ(n) mod n = 1
 # Fermat's little theorem is indeed a special case, because if n is a prime number, then φ(n) = n − 1.
 
+# Time complexity: O(n)
+# Space complexity: O(n)
 def euler(n):
     cnt = 0
     is_prime = [True] * (n+1)
