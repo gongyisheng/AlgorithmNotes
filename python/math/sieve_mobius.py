@@ -10,6 +10,8 @@ import time
 # μ(n) = −1 if n is a square-free positive integer with an odd number of prime factors.
 # μ(n) = 0 if n has a squared prime factor.
 
+# Time complexity: O(n)
+# Space complexity: O(n)
 def mobius(n):
     is_prime = [True] * (n+1)
     is_prime[1] = False
