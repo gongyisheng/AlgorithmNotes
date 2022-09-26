@@ -27,13 +27,13 @@ def mobius(n):
         # sieve the target number: i*prime[j]
         while j < len(prime) and i * prime[j] <= n:
             is_prime[i * prime[j]] = False
-            # if i%prime[j] == 0, which means that the target has squared prime factor
             if i % prime[j] == 0:
+                # if i%prime[j] == 0, which means that the target has squared prime factor
                 mu[i * prime[j]] = 0
                 break
-            # if i%prime[j] != 0, which means that the target does not has squared prime factor
-            # mu[target] = -mu[i] because now the number of prime factors ++
             else:
+                # if i%prime[j] != 0, which means that the target does not has squared prime factor
+                # mu[target] = -mu[i] because now the number of prime factors ++
                 mu[i * prime[j]] = -mu[i]
             j = j + 1
     return mu[n]
